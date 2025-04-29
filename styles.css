@@ -1,0 +1,147 @@
+/* styles.css */
+
+/* Importação da fonte Hilmar – certifique-se de ter os arquivos na pasta fonts/ */
+@font-face {
+    font-family: 'Hilmar';
+    src: url('fonts/Hilmar-Regular.woff2') format('woff2'),
+         url('fonts/Hilmar-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; /* Empilhar itens no mobile */
+    align-items: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+  }
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* Apenas uma coluna no celular */
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: 500px;
+  }
+  
+  
+  /* Variáveis de Cores e Fontes */
+  :root {
+    --primary-color: #ec6626;      /* Laranja */
+    --secondary-color: #283376;    /* Azul */
+    --background-color: #ffffff;   /* Branco */
+    --text-color: #333333;
+    --font-primary: 'Hilmar', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-secondary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Cabeçalho */
+  .site-header {
+    background-color: var(--primary-color);
+    padding: 0px 0;
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0px;
+  }
+  
+  /* Área Esquerda: Alinhamento à esquerda */
+  .header-left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  /* Área Central: Alinhamento central */
+  .header-center {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Área Direita: Alinhamento à direita */
+  .header-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  /* Estilos para as imagens do cabeçalho */
+  .header-left img {
+    width: 350px;   /* Tamanho médio; ajuste conforme necessário */
+    height: auto;
+  }
+  
+  .header-center img {
+    width: 500px;   /* Imagem central pode ser um pouco maior */
+    height: auto;
+  }
+  
+  .header-right img {
+    width: 210%;   /* Tamanho médio */
+    height: auto
+  }
+  
+  /* Slogan abaixo da imagem central */
+  .header-center .slogan {
+    margin-top: 1px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  
+  /* Cartões de Imóveis */
+  .card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Botões */
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #d0551f;
+    border-color: #d0551f;
+  }
+  
+  .btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+  
+  .btn-success:hover {
+    background-color: #222b5e;
+    border-color: #222b5e;
+  }
+  Residência - Bairro Francisco Duarte
+  .property-image {
+    width: 100%;
+    height: 300px; /* Ou outro valor que combine com seu layout */
+    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+    border-radius: 8px; /* Opcional: deixa os cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Opcional: dá destaque */
+  }
