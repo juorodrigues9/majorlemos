@@ -9,6 +9,21 @@
   font-style: normal;
 }
 
+/* Uniformiza o tamanho das imagens do carousel */
+.carousel-inner img {
+  height: 450px; /* Ajuste conforme necessário */
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel-inner img {
+    height: 250px;
+  }
+}
+
+
 /* Variáveis de cores e fontes */
 :root {
   --primary-color: #ec6626;      /* Laranja */
