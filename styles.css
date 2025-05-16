@@ -9,11 +9,19 @@
   font-style: normal;
 }
 
-/* Uniformiza o tamanho das imagens do carousel */
 .carousel-inner img {
-  height: 450px; /* Ajuste conforme necessário */
-  object-fit: cover;
-  width: 100%;
+  max-height: 500px; /* Define altura máxima */
+  width: auto;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  object-fit: contain; /* Mantém proporção sem cortar */
+  background-color: #f8f9fa; /* Fundo claro opcional, caso tenha bordas */
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  .carousel-inner img {
+    max-height: 250px;
+  }
 }
 
 /* Responsividade */
